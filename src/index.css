@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 500;
+    src: url("/fonts/Roboto-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 300;
+    src: url("/fonts/Roboto-Light.woff2") format("woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    background-image: url("/images/backgrounds/snow.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    padding: 3rem 0 5rem 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+@media (max-width: 1130px) {
+    .container {
+        padding-inline: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding-bottom: 20px;
+    }
+    #root {
+        flex-direction: column;
+    }
+    .container {
+        min-height: 50vh;
+    }
+}
+
+@media (max-width: 430px) {
+    .container {
+        padding-inline: 20px;
+    }
+}
+
+.hiddenTablet {
+    display: block;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+.shownTablet {
+    display: none;
+    @media (max-width: 1024px) {
+        display: block;
+    }
+}
